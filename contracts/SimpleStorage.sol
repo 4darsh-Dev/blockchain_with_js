@@ -17,7 +17,7 @@ contract SimpleStorage{
     // strings can be conerted into bytes objects (max 32) 
     bytes32 favoriteBytes = "harry";
 
-    uint256 public favNum; // auto intiazlied to 0 (node value)
+    uint256  favNum; // auto intiazlied to 0 (node value)
     
     // auto matically make variable to internal(only accessed by child class and class)
 
@@ -53,5 +53,27 @@ contract SimpleStorage{
     }
 
     People public person1 = People({favorteNum : 52, name : "Adarsh", smart: true});
+
+    // creating an array
+
+    // dynamic array
+    People[] public  peopleArr;
+
+    //fixed array
+    uint256[4] public numArr;
+
+    function addPerson(string memory _name, uint256 _favNum, bool _smart) public{
+        // populating the struct array 
+        peopleArr.push(People(_favNum, _name, _smart));
+
+        // other way ;
+        People memory newPerson = People({favorteNum: _favNum, name: _name, smart: _smart});
+        
+        peopleArr.push(newPerson);
+
+
+    }
+
+    
 
 }
