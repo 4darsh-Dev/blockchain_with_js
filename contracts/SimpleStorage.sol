@@ -66,13 +66,16 @@ contract SimpleStorage{
         // populating the struct array 
         peopleArr.push(People(_favNum, _name, _smart));
 
+        nameToFavNum[_name] = _favNum;
+
         // other way ;
-        People memory newPerson = People({favorteNum: _favNum, name: _name, smart: _smart});
+        // People memory newPerson = People({favorteNum: _favNum, name: _name, smart: _smart});
         
-        peopleArr.push(newPerson);
+        // peopleArr.push(newPerson);
 
 
     }
+
     // EVM can access and store information in 6 places:
     // 1. Stack, 2.Memory, 3. Storage, 4.Calldata, 5.Code, 6.Logs
 
@@ -83,6 +86,13 @@ contract SimpleStorage{
 
     // using memory : data location can only be specified for string(array of bytes) array, struct or mapping types
 
+
+    // MAPPINGS types
+    // similar to a dictionary (key : value)
+
+    mapping(string => uint256) public nameToFavNum;
+
     
 
 }
+
