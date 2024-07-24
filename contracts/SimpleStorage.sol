@@ -73,6 +73,15 @@ contract SimpleStorage{
 
 
     }
+    // EVM can access and store information in 6 places:
+    // 1. Stack, 2.Memory, 3. Storage, 4.Calldata, 5.Code, 6.Logs
+
+    // calldata and memory => variable exists temporarily (during transaction func call)
+    // storage => exisits (perminent variable) like unit public favoriteNumber;
+    // calldata => cannot be modified (throws error)
+    // memory => can be modified
+
+    // using memory : data location can only be specified for string(array of bytes) array, struct or mapping types
 
     
 
