@@ -1,0 +1,12 @@
+node_modules
+package.json
+img
+artifacts/
+cache/
+coverage
+ignition/
+.env
+.*
+README.md
+coverage.json
+commands.md
