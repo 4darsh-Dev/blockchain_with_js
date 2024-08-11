@@ -8,4 +8,4 @@ require("dotenv").config()
 console.log(typeof process.env.PRIVATE_KEY)
 console.log(process.env.PRIVATE_KEY)
 
-
+console.log("I am just checking !")
